@@ -93,7 +93,7 @@
       <br>
       <div id="div_msg"></div>
       <button class="button1" onclick="cadastrar()">cadastrar</button>
-  
+
     </div>
     <div class="div_img">
       <img src="./WhatsApp Image 2021-11-15 at 17.48.20 (1).jpeg" alt="">
@@ -103,24 +103,32 @@
 </html>
 <script>
   function cadastrar() {
-    
+
     var email = inp_email.value;
     var senha = inp_senha.value;
     var Confirmar_senha = inp_confirmar.value;
+    if (senha != Confirmar_senha) {
+      if (email.indexOf("@") > -1) {
+        if (email.indexOf(".com") > -1) {
+          div_msg.innerHTML = `<span class="span-msg" style="color: white;">Email valido</span>`
+        } else {
 
-    if (email.indexOf("@") > -1 ) {
-      if (email.indexOf(".com") > -1) {
-      div_msg.innerHTML =`<span class="span-msg" style="color: white;">Email valido</span>`
+          document.getElementById("inp_confirmar").style.border = "1px solid red"
+          document.getElementById("inp_senha").style.border = "1px solid red"
+        }
+      }
+      else {
+        div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
+      }
     } else {
-      div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`}     
-    } else{
+      alert("os campos precisam ser preenchidos")
       div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
-    document.getElementById("inp_email").style.border = "1px solid red"
-      
-    } if (senha != Confirmar_senha) {
-      div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
+      document.getElementById("inp_email").style.border = "1px solid red"
       document.getElementById("inp_confirmar").style.border = "1px solid red"
       document.getElementById("inp_senha").style.border = "1px solid red"
     }
   }
+
+
+
 </script>
