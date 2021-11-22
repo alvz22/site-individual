@@ -17,7 +17,7 @@
 
       <ul class="navbar__menu">
         <li class="navbar__item">
-          <a href="#home-page" class="navbar__links" id="home-page">Incio</a>
+          <a href="index2.html" class="navbar__links" id="home-page">Incio</a>
         </li>
 
         </li>
@@ -33,7 +33,7 @@
           <a href="#sign-up" class="button" id="signup">cadastro</a>
         </li> <span class="span_traco"> ||</span>
         <li class="navbar__btn">
-          <a href="#sign-in" class="button" id="signin">login</a>
+          <a href="login.html" class="button" id="signin">login</a>
         </li>
 
       </ul>
@@ -75,14 +75,15 @@
     <div>
       <div class="traco-direita"></div>
       <div class="traco-esquerda"></div>
-      <span class="span_nome"> Nome</span>
+      <span class="span_nome" maxlength="40"> Nome</span>
       <br>
-      <input type="text">
+      <input type="text" id="inp_nome">
       <br>
       <span>Email</span>
       <br>
       <input maxlength="40" type="text" id="inp_email">
       <br>
+
       <span>Senha</span>
       <br>
       <input type="password" id="inp_senha">
@@ -93,7 +94,7 @@
       <br>
       <div id="div_msg"></div>
       <button class="button1" onclick="cadastrar()">cadastrar</button>
-  
+
     </div>
     <div class="div_img">
       <img src="./WhatsApp Image 2021-11-15 at 17.48.20 (1).jpeg" alt="">
@@ -103,21 +104,36 @@
 </html>
 <script>
   function cadastrar() {
-    
+
     var email = inp_email.value;
     var senha = inp_senha.value;
     var Confirmar_senha = inp_confirmar.value;
+    var nome = inp_nome.value
 
-    if (email.indexOf("@") > -1 ) {
-      if (email.indexOf(".com") > -1) {
-      div_msg.innerHTML =`<span class="span-msg" style="color: white;">Email valido</span>`
+    if (nome != "" && email != "" && senha != "" && Confirmar_senha != "") {
+      if (email.indexOf("@") > -1) {
+        if (email.indexOf(".com") > -1) {
+          div_msg.innerHTML = `<span class="span-msg" style="color: white;">Email valido</span>`
+        }
+
+        else {
+          div_msg.innerHTML = `<span  style="color: red;">Email invalido</span>`
+        }
+      } else {
+        div_msg.innerHTML = `<span  style="color: red;">Email invalido</span>`
+        document.getElementById("inp_email").style.border = "1px solid red"
+
+      }
     } else {
-      div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`}     
-    } else{
-      div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
-    document.getElementById("inp_email").style.border = "1px solid red"
-      
-    } if (senha != Confirmar_senha) {
+      alert("Os campos precisam ser preenchidos!")
+      document.getElementById("inp_email").style.border = "1px solid red"
+      document.getElementById("inp_confirmar").style.border = "1px solid red"
+      document.getElementById("inp_senha").style.border = "1px solid red"
+      document.getElementById("inp_senha").style.border = "1px solid red"
+      document.getElementById("inp_nome").style.border = "1px solid red"
+    }
+
+    if (senha != Confirmar_senha) {
       div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
       document.getElementById("inp_confirmar").style.border = "1px solid red"
       document.getElementById("inp_senha").style.border = "1px solid red"

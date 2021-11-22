@@ -210,7 +210,7 @@ body{
     list-style-type: none;
 }
 .item-social-media {
-    border: 1px solid #bdc3c7;
+    border: 1px solid rgb(189, 195, 199);
     border-radius: 50%;
     width: 35px;
     height: 35px;
@@ -298,3 +298,55 @@ img{
 .span_nome{
  margin-left: -67px;
 }
+.div-login{
+  background-color: rgba(24, 23, 23, 0.207);
+  float: left;
+  position: relative;
+  top: 120px;
+  left: 800px;
+  align-items: center;
+  width: 350px;
+  height: 400px;
+  border-radius: 30px;
+  border-left: 6px solid #8C8C8C;
+}
+.div-login h1{
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  color: white;
+}
+.div-login p{
+  color: white;
+  position: relative;
+  right: 40px;
+  top: 10px;
+}
+.div-login input{
+    
+  font-size: 12spx;
+  width: 250px;
+  height: 30px;
+  color: white;
+  background-color: rgb(22, 21, 21);
+  margin-top: 10px;
+ 
+  border: black;
+  border-radius: 10px;
+  position: relative;
+  left: 30px; 
+}
+.div-login span{
+  position: relative;
+  left: 30px;
+  top: 10px;
+}
+.div-img-login{
+  float: right;
+  position: relative;
+  right: 500px;
+  bottom: 320px;
+  
+}
+
+  
