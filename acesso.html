@@ -108,6 +108,7 @@
     var email = inp_email.value;
     var senha = inp_senha.value;
     var Confirmar_senha = inp_confirmar.value;
+<<<<<<< HEAD
     var nome = inp_nome.value
 
     if (nome != "" && email != "" && senha != "" && Confirmar_senha != "") {
@@ -134,9 +135,30 @@
     }
 
     if (senha != Confirmar_senha) {
+=======
+    if (senha != Confirmar_senha) {
+      if (email.indexOf("@") > -1) {
+        if (email.indexOf(".com") > -1) {
+          div_msg.innerHTML = `<span class="span-msg" style="color: white;">Email valido</span>`
+        } else {
+
+          document.getElementById("inp_confirmar").style.border = "1px solid red"
+          document.getElementById("inp_senha").style.border = "1px solid red"
+        }
+      }
+      else {
+        div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
+      }
+    } else {
+      alert("os campos precisam ser preenchidos")
+>>>>>>> d64bd3f71a77bb5c82ee9980637b155ae040c566
       div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
+      document.getElementById("inp_email").style.border = "1px solid red"
       document.getElementById("inp_confirmar").style.border = "1px solid red"
       document.getElementById("inp_senha").style.border = "1px solid red"
     }
   }
+
+
+
 </script>
