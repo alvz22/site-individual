@@ -62,7 +62,7 @@ body{
     position: relative;
     left: 100px;
     top: 150px;
-    z-index: 2;
+    z-index: 2; 
 }
 .div-img img{
     width: 220px;
@@ -81,6 +81,14 @@ body{
     left: -130px;
     top: 137px;
     background-color: thistle;
-    z-index: 1;
+   z-index: 1;
     border: 1px white solid;
+}
+#div-teste{
+    width: 30%;
+    height: 40%;
+    display: none;
+    float: left;
+    background-color:white;
+    
 }

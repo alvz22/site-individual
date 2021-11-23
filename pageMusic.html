@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    
+    <div class="container">
     <div class="search-box">
         <input class="search-inp" type="text" name="" placeholder="Faça a sua pesquisa">
         <a class="search-btn" href="#">
@@ -19,12 +19,20 @@
        
     </div>
     <div class="div-before">
-
+ 
     </div>
     <div class="div-img">
     <img onclick="melhores_jazz()" src="./AkpINLx.jpg" alt="">
     <p>Os melhores do jazz</p>
+   
         </div>
-        <div class="div-sobreposta"></div>
+        <div class="div-sobreposta"></div> 
+        <div id="div_teste"></div>
+        </div>
 </body>
 </html>
+<script>
+    function melhores_jazz() {
+         div_teste.style.display = "block"
+    }
+</script>
