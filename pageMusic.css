@@ -56,6 +56,60 @@ body{
     height: 625px;
     background-color:#131313;
     border-right:3px solid #5a5a5a;
+    position:fixed;
+    color: white;
+}
+.div-before span{
+    position: relative;
+    top: 30px;
+    right: 30px;
+    color: rgb(119, 49, 49);
+    top: 40px;
+}
+.div-before  h1{
+    margin-left: 40px;
+    font-size: 40px;
+}
+.hr{
+    position: relative;
+    top: 50px;
+    margin: 10px;
+}
+.div-before p{
+    position: relative;
+    top: 70px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+    text-decoration: solid;
+}
+.div-before a{
+    position: relative;
+    top: 80px;
+   color: white;
+   
+}
+a:hover{
+    color: brown;
+}
+.div-before li{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.hr_list {
+    position: relative;
+    top: 150px;
+    margin: 10px;
+}
+.line{
+    position: relative;
+    top:280px;
+    margin: 10px;
+}
+h3{
+    position: relative;
+    top: 300px;
+    margin-left: 50px;
 }
 .div-img{
     float: left;
@@ -91,4 +145,68 @@ body{
     float: left;
     background-color:white;
     
+}
+
+  audio{
+      width: 300px;
+      margin: 5px;
+      position: relative;
+      top: 60px; 
+
+  }
+  img{
+      position: relative;
+      bottom: -40px;
+      left: 50px;
+      
+  }
+  .container_music{
+      display: flex;
+  }
+ .cantor{
+     color: white;
+     position: relative;
+     top: -50%;
+    
+ }
+ i{
+     position: relative;
+     top: 30%;
+ }
+.div_music p{
+    position: relative;
+    bottom: -50px;
+}
+.div_music{
+    border: white 1px solid;
+    height: 400px;
+    position: relative;
+    left: 200px;
+    margin-left: 20px;
+}
+.div_music audio{
+    position: relative;
+    bottom: 200px;
+}
+.div_musica p{
+    position: relative;
+    bottom: -50px;
+}
+.div_musica{
+    border: white 1px solid;
+    height: 400px;
+    position: relative;
+    left: 200px;
+    margin-left: 20px;
+}
+.div_musica audio{
+    position: relative;
+    bottom: 200px;
+}
+.cont{
+    display: flex;
+    position: relative;
+    top: 500px;
+    right: 1000px;
+    width: 250px;
 }

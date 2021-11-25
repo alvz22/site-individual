@@ -27,8 +27,7 @@
         <li class="navbar__item">
           <a href="#div_nosso_site" class="navbar__links" id="services-page">Serviços</a>
         </li>
-        <li class="navbar__item">
-          <a href="#plano_premium" class="navbar__links" id="services-page">Premium</a>
+       
         <li class="navbar__btn">
           <a href="#sign-up" class="button" id="signup">cadastro</a>
         </li> <span class="span_traco"> ||</span>
@@ -97,7 +96,7 @@
 
     </div>
     <div class="div_img">
-      <img src="./WhatsApp Image 2021-11-15 at 17.48.20 (1).jpeg" alt="">
+      <img src="./img/WhatsApp Image 2021-11-15 at 17.48.20 (1).jpeg" alt="">
     </div>
 </body>
 
@@ -108,7 +107,7 @@
     var email = inp_email.value;
     var senha = inp_senha.value;
     var Confirmar_senha = inp_confirmar.value;
-<<<<<<< HEAD
+
     var nome = inp_nome.value
 
     if (nome != "" && email != "" && senha != "" && Confirmar_senha != "") {
@@ -123,6 +122,10 @@
       } else {
         div_msg.innerHTML = `<span  style="color: red;">Email invalido</span>`
         document.getElementById("inp_email").style.border = "1px solid red"
+      document.getElementById("inp_confirmar").style.border = "1px solid red"
+      document.getElementById("inp_senha").style.border = "1px solid red"
+      document.getElementById("inp_senha").style.border = "1px solid red"
+      document.getElementById("inp_nome").style.border = "1px solid red"
 
       }
     } else {
@@ -135,7 +138,7 @@
     }
 
     if (senha != Confirmar_senha) {
-=======
+
     if (senha != Confirmar_senha) {
       if (email.indexOf("@") > -1) {
         if (email.indexOf(".com") > -1) {
@@ -151,14 +154,14 @@
       }
     } else {
       alert("os campos precisam ser preenchidos")
->>>>>>> d64bd3f71a77bb5c82ee9980637b155ae040c566
+
       div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
       document.getElementById("inp_email").style.border = "1px solid red"
       document.getElementById("inp_confirmar").style.border = "1px solid red"
       document.getElementById("inp_senha").style.border = "1px solid red"
     }
   }
-
+  }
 
 
 </script>
