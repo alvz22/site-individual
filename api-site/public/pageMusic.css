@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000
+    ;
+}
+.search-box{
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    background: #353b48;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-btn{
+    color: #00a8ff;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #353b48;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3s;
+}
+.search-inp{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    
+    width:450px;
+}
+.search-box:hover > .search-inp{
+    width: 500px;
+    padding:  0 4px;
+}
+.search-box:hover > .search-btn{
+    background: white;
+}
+.div-before{
+    float: left;
+    width: 20%;
+    height: 625px;
+    background-color:#131313;
+    border-right:3px solid #5a5a5a;
+}
+.div-img{
+    float: left;
+    position: relative;
+    left: 100px;
+    top: 150px;
+    z-index: 2; 
+}
+.div-img img{
+    width: 220px;
+    border: 1px solid white ;
+    cursor: pointer;
+}
+.div-img p{
+    color: white;
+    text-align: center;
+}
+.div-sobreposta {
+    float: left;
+    position: relative;
+    width: 223px;
+    height: 138px;
+    left: -130px;
+    top: 137px;
+    background-color: thistle;
+   z-index: 1;
+    border: 1px white solid;
+}
+#div-teste{
+    width: 30%;
+    height: 40%;
+    display: none;
+    float: left;
+    background-color:white;
+    
+}
