@@ -87,6 +87,7 @@ body{
     position: relative;
     top: 80px;
    color: white;
+   text-decoration: none;
    
 }
 a:hover{
@@ -103,12 +104,12 @@ a:hover{
 }
 .line{
     position: relative;
-    top:280px;
+    top:230px;
     margin: 10px;
 }
 h3{
     position: relative;
-    top: 300px;
+    top: 250px;
     margin-left: 50px;
 }
 .div-img{
@@ -163,12 +164,8 @@ h3{
   .container_music{
       display: flex;
   }
- .cantor{
-     color: white;
-     position: relative;
-     top: -50%;
-    
- }
+  
+ 
  i{
      position: relative;
      top: 30%;
