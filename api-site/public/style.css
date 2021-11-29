@@ -233,10 +233,18 @@
     height: 500px;
     position: relative;
     right: 150px;
+    
   }
+  #div_classico img {
+    border-radius: 20px;
+    border: 3px #131313 solid;
+  }
+
   #div_classico {
    position: relative;
-   left: 90px;
+   left: 50px;
+  
+  
   }
   
 
@@ -253,8 +261,9 @@
   #div_img_instrumental img{
     height: 300px;
     position: relative;
-    left:230px;
-
+    left:210px;
+    border-radius: 20px;
+    border: 3px #131313 solid;
   }
   #div_img_canto {
     position: relative;
@@ -266,6 +275,8 @@
   }
   #div_img_canto img {
     height: 300px;
+    border-radius: 20px;
+    border: 3px #131313 solid;
   }
   #div_classico p{
     color: white;

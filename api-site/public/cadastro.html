@@ -13,11 +13,11 @@
 <body>
   <nav class="navbar">
     <div class="navbar__container">
-      <a href="#home" id="navbar__logo">Jazz/Music</a>
+      <a href="index.html" id="navbar__logo">Jazz/Music</a>
 
       <ul class="navbar__menu">
         <li class="navbar__item">
-          <a href="index2.html" class="navbar__links" id="home-page">Incio</a>
+          <a href="index.html" class="navbar__links" id="home-page">Incio</a>
         </li>
 
         </li>
@@ -27,8 +27,7 @@
         <li class="navbar__item">
           <a href="#div_nosso_site" class="navbar__links" id="services-page">Serviços</a>
         </li>
-        <li class="navbar__item">
-          <a href="#plano_premium" class="navbar__links" id="services-page">Premium</a>
+        
         <li class="navbar__btn">
           <a href="#sign-up" class="button" id="signup">cadastro</a>
         </li> <span class="span_traco"> ||</span>
@@ -106,40 +105,40 @@
   function cadastrar() {
 
     var nomeVar = inp_nome.value;
-        var emailVar = inp_email.value;
-        var senhaVar = inp_senha.value;
-        var confirmacaoSenhaVar = inp_confirmar.value;
-        
+    var emailVar = inp_email.value;
+    var senhaVar = inp_senha.value;
+    var confirmacaoSenhaVar = inp_confirmar.value;
 
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                nome: nomeVar,
-                email: emailVar,
-                senha: senhaVar,
-                
-            })
-        }).then(function (resposta) {
 
-            console.log("resposta: ", resposta);
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        nome: nomeVar,
+        email: emailVar,
+        senha: senhaVar,
 
-            if (resposta.ok) {
-                window.alert("Cadastro realizado com sucesso!");
-                window.location = "login.html";
-                finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            
-        });
-    
+      })
+    }).then(function (resposta) {
 
-   
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        window.alert("Cadastro realizado com sucesso!");
+        window.location = "login.html";
+        finalizarAguardar();
+      } else {
+        throw ("Houve um erro ao tentar realizar o cadastro!");
+      }
+    }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+
+    });
+
+
+
 
     if (nomeVar != "" && emailVar != "" && senhaVar != "" && confirmacaoSenhaVar != "") {
       if (emailVar.indexOf("@") > -1) {
@@ -164,31 +163,31 @@
       document.getElementById("inp_nome").style.border = "1px solid red"
     }
 
-    if (senhaVar !=confirmacaoSenhaVar) {
-
     if (senhaVar != confirmacaoSenhaVar) {
-      if (email.indexOf("@") > -1) {
-        if (email.indexOf(".com") > -1) {
-          div_msg.innerHTML = `<span class="span-msg" style="color: white;">Email valido</span>`
-        } else {
 
-          document.getElementById("inp_confirmar").style.border = "1px solid red"
-          document.getElementById("inp_senha").style.border = "1px solid red"
+      if (senhaVar != confirmacaoSenhaVar) {
+        if (email.indexOf("@") > -1) {
+          if (email.indexOf(".com") > -1) {
+            div_msg.innerHTML = `<span class="span-msg" style="color: white;">Email valido</span>`
+          } else {
+
+            document.getElementById("inp_confirmar").style.border = "1px solid red"
+            document.getElementById("inp_senha").style.border = "1px solid red"
+          }
         }
-      }
-      else {
+        else {
+          div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
+        }
+      } else {
+        alert("os campos precisam ser preenchidos")
+
         div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
+        document.getElementById("inp_email").style.border = "1px solid red"
+        document.getElementById("inp_confirmar").style.border = "1px solid red"
+        document.getElementById("inp_senha").style.border = "1px solid red"
       }
-    } else {
-      alert("os campos precisam ser preenchidos")
-
-      div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`
-      document.getElementById("inp_email").style.border = "1px solid red"
-      document.getElementById("inp_confirmar").style.border = "1px solid red"
-      document.getElementById("inp_senha").style.border = "1px solid red"
     }
-  }
-
+    
   }
 
 </script>
