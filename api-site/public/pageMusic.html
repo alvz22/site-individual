@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,30 +10,97 @@
     <link rel="stylesheet" href="pageMusic.css">
 
 </head>
+
 <body>
     <div class="container">
-    <div class="search-box">
-        <input class="search-inp" type="text" name="" placeholder="Faça a sua pesquisa">
-        <a class="search-btn" href="#">
-            <i class="fas fa-search"></i>
-        </a>
-       
-    </div>
-    <div class="div-before">
- 
-    </div>
+        <div class="search-box">
+            <input class="search-inp" type="text" name="" placeholder="Faça a sua pesquisa">
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+            </a>
+
+        </div>
+
+        <div class="div-before">
+            <h1>Jazz <span>Music</span></h1>
+            <hr class="hr">
+            <p>Playlists</p>
+            <ul>
+                <a href="pageMusic.html">
+                    <li>Louis Armstrong</li>
+                </a>
+                <br>
+                
+                <a href="FrankSinatra.html">
+                    <li>Frank Sinatra</li>
+                </a>
+                <br>
+                <a href="b.bKing.html">
+                    <li>B.B King</li>
+                </a>
+                <br>
+                <a href="instrumental.html">
+                    <li>Jazz instrumentais</li>
+                </a>
+
+            </ul>
+           
+            <hr class="line">
+
+            
+
+            <h3>Seu Perfil</h3>
+        </div>
+    </div class="div_music">
+
     <div class="div-img">
-    <img onclick="melhores_jazz()" src="./AkpINLx.jpg" alt="">
-    <p>Os melhores do jazz</p>
-   
+
+        <div class="container_music">
+
+            <div class="div_music">
+                <img src="./assets/img/loius armstrong.jpg" alt="">
+                <p>La vie en rose - Louis Armstrong</p>
+                <audio src="./music/La vie en rose   Louis Armstron.mp3" controls></audio>
+            </div>
+            <div class="div_music">
+                <img src="./assets/img/loius armstrong.jpg" alt="">
+                <p>when the saints go marching <br> - Louis Armstrong</p>
+                <audio controls src="./music/Louis Armstrong   When The Saints Go Marching I.mp3"></audio>
+            </div>
+            <div class="div_music">
+                <img src="./assets/img/loius armstrong.jpg" alt="">
+                <p>Hello Dolly - Louis Armstrong</p>
+                <audio controls src="./music/Louis Armstrong   Hello Dolly Liv.mp3"></audio>
+            </div>
+
+            <!--continuação da lista de música do cantor loius armstrong-->
+            <div class="cont">
+                <div class="div_musica">
+                    <img src="./assets/img/loius armstrong.jpg" alt="">
+                    <p> What A Wonderful Worl - Louis Armstrong</p>
+                    <audio controls src="./music/Louis Armstrong   What A Wonderful Worl.mp3"></audio>
+                </div>
+                <div class="div_musica">
+                    <img src="./assets/img/loius armstrong.jpg" alt="">
+                    <p>Go Down Mose- Louis Armstrong</p>
+                    <audio controls src="./music/Louis Armstrong Go Down Mose.mp3"></audio>
+                </div>
+                <div class="div_musica">
+                    <img src="./assets/img/loius armstrong.jpg" alt="">
+                    <p> Please Send Me Someone - Louis Armstrong</p>
+                    <audio controls src="./music/Please Send Me Someone To Lov.mp3"></audio>
+                </div>
+            </div>
         </div>
-        <div class="div-sobreposta"></div> 
+
+
         <div id="div_teste"></div>
-        </div>
+    </div>
 </body>
+
 </html>
 <script>
     function melhores_jazz() {
-         div_teste.style.display = "block"
+        div_teste.style.display = "block"
     }
 </script>

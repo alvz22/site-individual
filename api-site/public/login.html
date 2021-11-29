@@ -86,7 +86,7 @@
           
           <br>
           <div id="div_msg"></div>
-          <button class="button1" onclick="Entrar()">Entrar</button>
+          <button class="button1" onclick="entrar()">Entrar</button>
     
         </div>
         <div class="div-img-login">
@@ -102,13 +102,13 @@
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
         if (emailVar == "" || senhaVar == "") {
             window.alert("Preencha todos os campos para prosseguir!");
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
         }
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            finalizarAguardar();
+            // finalizarAguardar();
         }
 
         fetch("/usuarios/autenticar", {
@@ -135,7 +135,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "./pageMusic.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -146,7 +146,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                    // finalizarAguardar(texto);
                 });
             }
 
