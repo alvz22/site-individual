@@ -27,20 +27,20 @@
             <p>Playlists</p>
             <ul>
                 <a href="pageMusic.html">
-                    <li>Louis Armstrong</li>
+                    <li onclick="registrar_louis()">Louis Armstrong</li>
                 </a>
                 <br>
                 
-                <a href="instrumental.html">
-                    <li>Frank Sinatra</li>
+                <a href="FrankSinatra.html">
+                    <li onclick="registrar_frank()" >Frank Sinatra</li>
                 </a>
                 <br>
                 <a href="b.bKing.html">
-                    <li>B.B King</li>
+                    <li onclick="registrar()" >B.B King</li>
                 </a>
                 <br>
-                <a href="instrumental.html">
-                    <li>Jazz instrumentais</li>
+                <a>
+                    <li onclick="resgistrar_jazz()">Jazz instrumentais</li>
                 </a>
 
             </ul>
@@ -100,7 +100,100 @@
 
 </html>
 <script>
-    function melhores_jazz() {
-        div_teste.style.display = "block"
-    }
+    function registrar() {
+    var fkPlaylist = 1;
+    fetch(`medidas/tempo-real/xpto`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fkPlaylist,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          window.alert("atualizado com sucesso!");
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
+  function registrar_frank() {
+    var fkPlaylist = 2;
+    fetch(`medidas/tempo-real/xpto`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fkPlaylist,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          window.alert("atualizado com sucesso!");
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
+  function registrar_louis() {
+    var fkPlaylist = 4;
+    fetch(`medidas/tempo-real/xpto`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fkPlaylist,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          window.alert("atualizado com sucesso!");
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
+  function resgistrar_jazz() {
+    var fkPlaylist = 3;
+    fetch(`medidas/tempo-real/xpto`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fkPlaylist,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          window.alert("atualizado com sucesso!");
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
 </script>
