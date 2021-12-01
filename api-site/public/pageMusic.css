@@ -9,6 +9,10 @@ body{
     background-color: #000
     ;
 }
+.container {
+    display: flex;
+  }
+  
 .search-box{
     position: absolute;
     top: 10%;
@@ -50,6 +54,11 @@ body{
 .search-box:hover > .search-btn{
     background: white;
 }
+ h2{
+    color: #fff;
+    position: relative;
+    left:200px;
+  }
 .div-before{
     float: left;
     width: 300px;
