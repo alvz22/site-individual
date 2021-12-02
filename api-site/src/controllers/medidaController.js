@@ -8,7 +8,7 @@ function buscarUltimasMedidas(req, res) {
   console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
   medidaModel
-    .buscarUltimasMedidas(fkPlaylist, limite_linhas)
+    .buscarUltimasMedidas(idUsuario, limite_linhas, idPlaylist)
     .then(function (resultado) {
       if (resultado.length > 0) {
         res.status(200).json(resultado);
@@ -27,12 +27,13 @@ function buscarUltimasMedidas(req, res) {
 }
 
 function atualizarMedidas(req, res) {
+  var fkUsuario = req.body.fkUsuario;
   var fkPlaylist = req.body.fkPlaylist;
 
   console.log(`Recuperando medidas em tempo real`);
 
   medidaModel
-    .atualizarMedidas(fkPlaylist)
+    .atualizarMedidas(fkPlaylist, fkUsuario)
     .then(function (resultado) {
       if (resultado.length > 0) {
         res.status(200).json(resultado);

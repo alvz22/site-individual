@@ -1,23 +1,23 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idPlaylist, limite_linhas) {
+function buscarUltimasMedidas(Usuario, limite_linhas, playlist) {
   instrucaoSql = `select 
-                        temperatura, 
-                        umidade, 
-                        momento,
+                        fkUsuario, 
+                        clicsUi, 
+                        fkPlaylist,
                         DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    from medida
-                    where fkPlaylist = ${idPlaylist}
+                    from clics
+                    where fkUsuario = ${idUsuario} and fkPlaylist = ${playlist}
                     order by id desc limit ${limite_linhas}`;
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
 }
 
-function atualizarMedidas(fkPlaylist) {
+function atualizarMedidas(fkPlaylist, fkUsuario) {
   instrucaoSql = `  update  
                     clics
                     set clicsUni = clicsUni + 1
-                    where fkPlaylist = ${fkPlaylist};
+                    where fkPlaylist =  ${fkPlaylist} and fkUsuario = ${fkUsuario};
                 `;
 
   console.log("Executando a instrução SQL: \n" + instrucaoSql);

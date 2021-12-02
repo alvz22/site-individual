@@ -140,6 +140,31 @@
             .catch(function (resposta) {
               console.log(`#ERRO: ${resposta}`);
             });
+            fetch("/usuarios/cadastrar2", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              nome: nomeVar,
+              email: emailVar,
+              senha: senhaVar,
+            }),
+          })
+            .then(function (resposta) {
+              console.log("resposta: ", resposta);
+
+              if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                finalizarAguardar();
+              } else {
+                throw "Houve um erro ao tentar realizar o cadastro!";
+              }
+            })
+            .catch(function (resposta) {
+              console.log(`#ERRO: ${resposta}`);
+            });
         } else {
           document.getElementById("inp_confirmar").style.border =
             "1px solid red";
