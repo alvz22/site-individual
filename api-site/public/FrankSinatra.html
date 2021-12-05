@@ -125,24 +125,27 @@
   </body>
 </html>
 <script>
-  function registrar() {
+   function registrar() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+
     var fkPlaylist = 1;
     fetch(`medidas/tempo-real/xpto`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         fkPlaylist,
-      }),
+        fkUsuario:idUsuario
+      })
     })
       .then(function (resposta) {
-        console.log("resposta: ", resposta);
+        console.log('resposta: ', resposta);
 
         if (resposta.ok) {
-          window.alert("atualizado com sucesso!");
+          window.alert('atualizado com sucesso!');
         } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
+          throw 'Houve um erro ao tentar realizar o cadastro!';
         }
       })
       .catch(function (resposta) {
@@ -150,23 +153,25 @@
       });
   }
   function registrar_frank() {
+    var idUsuario = sessionStorage.ID_USUARIO;
     var fkPlaylist = 2;
     fetch(`medidas/tempo-real/xpto`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         fkPlaylist,
-      }),
+        fkUsuario:idUsuario
+      })
     })
       .then(function (resposta) {
-        console.log("resposta: ", resposta);
+        console.log('resposta: ', resposta);
 
         if (resposta.ok) {
-          window.alert("atualizado com sucesso!");
+          window.alert('atualizado com sucesso!');
         } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
+          throw 'Houve um erro ao tentar realizar o cadastro!';
         }
       })
       .catch(function (resposta) {
@@ -174,23 +179,25 @@
       });
   }
   function registrar_louis() {
+    var idUsuario = sessionStorage.ID_USUARIO;
     var fkPlaylist = 4;
     fetch(`medidas/tempo-real/xpto`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         fkPlaylist,
-      }),
+        fkUsuario:idUsuario
+      })
     })
       .then(function (resposta) {
-        console.log("resposta: ", resposta);
+        console.log('resposta: ', resposta);
 
         if (resposta.ok) {
-          window.alert("atualizado com sucesso!");
+          window.alert('atualizado com sucesso!');
         } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
+          throw 'Houve um erro ao tentar realizar o cadastro!';
         }
       })
       .catch(function (resposta) {
@@ -198,23 +205,25 @@
       });
   }
   function resgistrar_jazz() {
+    var idUsuario = sessionStorage.ID_USUARIO;
     var fkPlaylist = 3;
     fetch(`medidas/tempo-real/xpto`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         fkPlaylist,
-      }),
+        fkUsuario:idUsuario
+      })
     })
       .then(function (resposta) {
-        console.log("resposta: ", resposta);
+        console.log('resposta: ', resposta);
 
         if (resposta.ok) {
-          window.alert("atualizado com sucesso!");
+          window.alert('atualizado com sucesso!');
         } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
+          throw 'Houve um erro ao tentar realizar o cadastro!';
         }
       })
       .catch(function (resposta) {
