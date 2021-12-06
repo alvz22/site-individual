@@ -80,6 +80,19 @@
 
 </html>
 <script>
+    var nomePlaylist = [];
+    fetch("/analytics/analytics")
+    .then(function (res) {
+        res.json().then(function (json) {
+            console.log(json);
+            var cliques = []
+            for (let index = 0; index < json.length; index++) {
+                nomePlaylist.push(json[index].likes);
+                
+                // votos.push(json[index].likes)
+            }
+
+            console.log(nomePlaylist);
     const grafico = {
         type: 'bar',
         data: {
@@ -88,7 +101,7 @@
                 {
 
                     label: "Playlists mais ouvidas",
-                    data: [300, 150, 500, 50],
+                    data: nomePlaylist,
                     backgroundColor: ['rgb(141,106,197)', 'rgb(226,223,55)', "rgb(194,40,40)", "rgb(0,255,128)"]
                 }
             ]
@@ -100,4 +113,10 @@
 
     }
     var analise_musica = new Chart(document.getElementById("melhor_playlist"), grafico);
+        })
+    }).catch(function(erro) {
+        console.log(erro);
+    }
+    )
+    
 </script>
