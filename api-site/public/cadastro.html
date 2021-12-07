@@ -112,6 +112,7 @@
     var senhaVar = inp_senha.value;
     var confirmacaoSenhaVar = inp_confirmar.value;
 
+    if (senhaVar == '' || emailVar == '' || nomeVar == '' || confirmacaoSenhaVar == '' ) {
     if (senhaVar == confirmacaoSenhaVar) {
       if (emailVar.indexOf("@") > -1) {
         if (emailVar.indexOf(".com") > -1) {
@@ -166,20 +167,33 @@
               console.log(`#ERRO: ${resposta}`);
             });
         } else {
-          document.getElementById("inp_confirmar").style.border =
-            "1px solid red";
-          document.getElementById("inp_senha").style.border = "1px solid red";
+          
+
+          div_msg.innerHTML = `<span  style="color: red;">Senhas não correspondentes</span>`;
+      document.getElementById("inp_email").style.border = "1px solid red";
+      
         }
       } else {
-        div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`;
-      }
-    } else {
-      
-
-      div_msg.innerHTML = `<span  style="color: red;">Email ou senha não correspondente</span>`;
-      document.getElementById("inp_email").style.border = "1px solid red";
+        alert ("os campos precisam ser preenchidos ")
+    document.getElementById("inp_email").style.border = "1px solid red";
       document.getElementById("inp_confirmar").style.border = "1px solid red";
       document.getElementById("inp_senha").style.border = "1px solid red";
+      document.getElementById("inp_nome").style.border = "1px solid red";
+      
+      }
+    } else {
+      div_msg.innerHTML = `<span  style="color: red;">email inválido</span>`;
+      document.getElementById("inp_email").style.border = "1px solid red";
+
+      
+     
     }
+  } else {
+    div_msg.innerHTML = `<span  style="color: red;">Senhas não correspondentes</span>`;
+    document.getElementById("inp_senha").style.border = "1px solid red";
+      document.getElementById("inp_confirmar").style.border = "1px solid red";
+      
+    
+  }
   }
 </script>
